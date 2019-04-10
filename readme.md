@@ -80,5 +80,5 @@ I will say that a lot of templating primers are not as "plain language" as I'd l
 - [Intro to micro-templating](https://johnresig.com/blog/javascript-micro-templating)
 - [Basics of JS templating](https://css-tricks.com/video-screencasts/127-basics-of-javascript-templating/)
 - [Precompiled templates w/handlebars](https://nuunoo.wordpress.com/2013/06/08/javascript-pre-compiled-templates-with-handlebars-js/)
-- [Stackoverflow: differentiating parsing, compiling, and rendering] (https://stackoverflow.com/questions/9384650/difference-between-compile-parse-and-render-in-mustache-js)
+- [Stackoverflow: differentiating parsing, compiling, and rendering](https://stackoverflow.com/questions/9384650/difference-between-compile-parse-and-render-in-mustache-js)
 ---
