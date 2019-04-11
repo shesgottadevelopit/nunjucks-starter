@@ -13,7 +13,7 @@ This will cover option #1. When I took my General Assembly course, we learned ab
 You can use my sample folder (`simple-app`) to test or create your own. Up to you. You need an HTML page w/elements, a JS file, and data (a JSON file or a JS object).
 
 
-## Step 1: Add nunjucks library to HTML page
+### Step 1: Add nunjucks library to HTML page
 Download the full Nunjucks library and add a reference to it at the bottom of your very simple HTML page using a `<script>` tag. The slim version won't work.
 ```html
 <script src="nunjucks.js"></script>
