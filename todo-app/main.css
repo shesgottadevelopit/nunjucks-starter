@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Pontano+Sans');
+
+html {
+    font-size: 16px;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    padding: 5em 0;
+    font-family: 'Pontano Sans', sans-serif;
+    font-size: 1rem;
+
+}
+
+form {
+    text-align: center;
+}
+
+.content {
+    width: 60%;
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.todoInput {
+    max-width: 100%;
+    outline: 0;
+}
+
+.todoInput:focus {
+    border: 2px solid grey;
+    outline: 0;
+}
+
+.todoBtn {
+    background-color: white;
+    border: 2px solid grey;
+    font-size: .85rem;
+    outline: 0;
+}
+#app {
+    padding-top: 2rem;
+}
+
+dt {
+    display: inline-block;
+}
+
+.todoItem{
+    flex-direction: row;
+    display:grid;
+    grid-template-columns: 20px 1fr 20px;
+    margin-bottom: .5rem;
+    align-items: flex-start;
+}
+
+.todoText {
+    padding-left: 1rem;
+}
+
+.markAsComplete {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: bold;
+    font-size: .6rem;
+    text-transform: uppercase;
+    display: inline-block;
+    float: right;
+
+}
+
+.deleteButton {
+    background-color: grey;
+    color: white;
+    border: none;
+    font-size: .85rem;
+    outline: 0;
+}
+
+.completed-todos {
+    padding-top: 2rem;
+}
+
+.viewCompletedTodosBtn,
+.hideCompletedTodosBtn {
+    background-color: grey;
+    color: white;
+    border: none;
+    font-size: .85rem;
+    outline: 0;
+    padding: .5rem;
+}
+
+.hidden-content {
+    display: none;
+}

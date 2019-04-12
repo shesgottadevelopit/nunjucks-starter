@@ -7,7 +7,7 @@
 
 # ignores these things
 njk-library/**
-todo-app/**
+# todo-app/**
 
 
 # ignores Netbeans config folder

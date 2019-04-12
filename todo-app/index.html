@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Intro to the DOM</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div class="content">
+            <h1>To Do List Tracker</h1>
+            <form id="form">
+                <input class="todoInput" type="text" name="newToDo" required="required" placeholder="Add a New Todo">
+                <button class="todoBtn" type="submit" name="button">Submit</button>
+            </form>
+            <div id="app">
+                <!-- handlebars template -->
+            </div>
+        </div>
+
+        <script type="text/x-nunjucks-template" id="todo-list">
+
+            {# TODO LIST template #}
+
+            {# this version moves things to a new list #}
+
+            {% if todos %}
+
+            <div style="font-weight: bold">Current Todos:</div>
+            <dl>
+                {% for todo in todos %}
+                    {% if todo.isCompleted %}
+                    <div class="todoItem">
+                        <input type="checkbox" name="todoCompleted" value="Mark As Incomplete" checked="checked" disabled>
+                        <dt class="todoText" data-index="{{loop.index0}}"><span>{{ todo.newTodo }}   </span><a href="#" class="markAsComplete"> Mark as Incomplete</a></dt>
+                        <button type="button" name="deleteButton" class="deleteButton">x</button>
+                    </div>
+                    {% else %}
+                    <div class="todoItem">
+                        <input type="checkbox" name="todoCompleted" value="Mark As Complete" disabled>
+                        <dt class="todoText" data-index="{{loop.index0}}"><span>{{todo.newTodo}}   </span><a href="#" class="markAsComplete">  Mark as Completed</a></dt>
+                        <button type="button" name="deleteButton" class="deleteButton">x</button>
+                    </div>
+                    {% endif %}
+
+                {% endfor %}
+
+            </dl>
+            {% else %}
+            <div> Your todos list is empty. You need something to do!! </div>
+            {% endif %}
+
+
+
+
+            {% if completedTodos %}
+
+                <div class="completed-todos">
+                <button type="button" class="viewCompletedTodosBtn">View Completed Todos</button>
+                <div class="hidden-content">
+                <!-- <div>Completed</div> -->
+                <dl>
+                    {% for item in completedTodos %}
+                        <div class="todoItem">
+                            <input type="checkbox" name="todoCompleted" checked="checked" disabled>
+                            <dt class="todoText" data-index="{{ loop.index0 }}">{{item.newTodo}}</dt>
+                        </div>
+
+                    {% endfor %}
+                </dl>
+                <button type="button" class="hideCompletedTodosBtn">Hide Completed Todos</button>
+                </div>
+
+            {% else %}
+            <div> There are no completed todos. </div>
+            {% endif %}
+
+
+        </script>
+        <script src="nunjucks.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
